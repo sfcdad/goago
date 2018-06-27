@@ -1,0 +1,1 @@
+goago.top
