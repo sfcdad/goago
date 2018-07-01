@@ -4512,6 +4512,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 @media (min-width:768px) {
     .navbar-header {
         float: left;
+        vertical-align:middle;
     }
 }
 
@@ -4560,13 +4561,15 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 
 @media (max-device-width:480px) and (orientation:landscape) {
     .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
-        max-height: 200px;
+        max-height: 150px;
     }
 }
 
 .container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header {
     margin-right: -15px;
     margin-left: -15px;
+    margin-top: 20px;
+    vertical-align:middle;
 }
 
 @media (min-width:768px) {
