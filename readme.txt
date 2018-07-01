@@ -1,4 +1,4 @@
-goago.top
+goago
 
 https://github.com/gin-gonic/gin
 
