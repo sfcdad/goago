@@ -1,0 +1,307 @@
+@CHARSET "UTF-8";
+/*****************全局样式**********************/
+/**导航**/
+a{
+    color: #333333;
+    font-size: 16px;
+}
+.navbar {
+    margin-bottom: 0;
+}
+.navbar-nav>li>a{
+    color: #333333;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #fb2339;
+    background-color: #f7f7f7;
+}
+.navbar-default .nav>li>a:hover {
+    background-color: #fdc132;
+	color:#fff;
+}
+.login:hover {
+    color: #fff;
+    background-color: #fdc132;
+    border-color: #fdc132;
+}
+.icon-bar {
+    background-color: black;
+}
+/**登录**/
+.form-horizontal .form-group {
+    margin-right: 0;
+    margin-left: 0;
+}
+/**任务栏**/
+#myTask1 {
+    text-align: center;
+}
+
+#myTask1 div p:nth-child(3) {
+    color: #999999;
+}
+
+#myTask1 a {
+    color: #999999;
+    border: 1px solid #999999;
+}
+
+#myTask1 :hover {
+    background-color: #fb2339;
+    color: #FFFFFF;
+}
+
+#myTask1 :hover p:nth-child(3) {
+    color: #FFFFFF;
+}
+
+#myTask1 :hover a {
+    background-color: #fdc132;
+    color: #FFFFFF;
+    border: 1px solid #fdc132;
+}
+/***问题栏*****/
+.panel-default {
+    border: none;
+}
+
+.panel-group .panel+.panel {
+    margin-top: 0;
+}
+
+.panel-group .panel {
+    border-radius: 0;
+}
+
+.panel-default>.panel-heading {
+    color: #666666;
+    border-color: #f7f7f7;
+    padding-left: 20px;
+    border-radius: 0;
+}
+
+#myQue :nth-child(2n+2) div {
+    background-color: white;
+    border: none;
+}
+/**验证码**/
+#code{
+    font-family:Arial;
+    font-style:italic;
+    font-weight:bold;
+    border:0;
+    letter-spacing:2px;
+    color:blue;
+}
+.marketing{
+    padding-bottom:50px;
+}
+#abountUs{
+    background: #fff;
+}
+#questions{
+    background: #f7f7f7;
+}
+#abountUs div img{
+    width: 100%;
+}
+#abountUs .myPro1 {
+    margin: 0 0 25px 0;
+}
+#abountUs .myPro1 p:nth-child(1) {
+    font-size: 40px;
+}
+
+
+@media screen and (max-width:770px) {
+    /*********登录注册***************/
+    .login{
+        margin: 9px 0 0 10px;
+        font-size: 14px;
+        width: 70px;
+        height: 30px;
+        border-radius: 15px;
+        border: 1px solid #333333;
+        color: #333333;
+        background-color: #f7f7f7;
+    }
+    .myPro {
+        margin: 35px 0 20px 0;
+    }
+    .myPro p:nth-child(1) {
+        font-size: 18px;
+    }
+    #abountUs .myPro1 {
+        padding: 35px 0 0 0;
+    }
+    #abountUs .myPro1 p:nth-child(1) {
+        font-size: 18px;
+    }
+    /*********任务栏***************/
+    #myTask1 div {
+        padding: 25px 0 25px 0;
+    }
+    #myTask1 div .glyphicon:before {
+        font-size: 30px;
+    }
+    #myTask1 div p:nth-child(2) {
+        margin: 5px 0 5px 0;
+        font-size: 14px;
+    }
+    #myTask1 div p:nth-child(3) {
+        margin: 0 0 10px 0;
+        font-size: 12px;
+    }
+    #myTask1 div p:nth-child(4){
+        margin: 20px 0 0 0;
+    }
+    #myTask1 div p:nth-child(4) a {
+        font-size:12px;
+        padding:4px 8px;
+        border-radius: 20px;
+        text-decoration: none;
+    }
+    /*********问题栏***************/
+    .panel-group {
+        margin-bottom:25px;
+    }
+    .panel-title {
+        font-size: 12px;
+    }
+    /*********关于我们***************/
+    .footer{
+        padding-top: 20px;
+    }
+    #erWeima{
+        width:150px;
+        height:150px;
+    }
+    .myInfo1 {
+        text-align: center;
+    }
+    .myInfo1 p:nth-child(1) {
+        font-size: 14px;
+    }
+    .myInfo2 {
+        font-size: 12px;
+        color: #999999;
+    }
+    .myInfo {
+        text-align: center;
+    }
+    .myInfo p:nth-child(1) {
+        font-size: 14px;
+        color: #999999;
+        margin-bottom: 10px;
+    }
+    .myInfo p:nth-child(2) {
+        font-size: 12px;
+        color: #666666;
+        margin-bottom: 20px;
+    }
+    .marketing{
+        padding-bottom:0;
+    }
+    #abountUs .myPro1 {
+        margin:0;
+    }
+    .about_img div:nth-child(2){
+    margin-top: 10px
+    }
+}
+
+/*<768px*/
+@media screen and (min-width: 770px) and (max-width:3000px) {
+    /***********登录注册**********/
+    .navbar-nav>li {
+        margin-left: 30px;
+    }
+    .login{
+        margin-top: 9px;
+        font-size: 16px;
+        width:80px;
+        height: 32px;
+        border-radius: 15px;
+        border: 1px solid #333333;
+        color: #333333;
+        background-color: #f7f7f7;
+    }
+
+    /************我们的项目********/
+    .myPro {
+        margin: 45px 0 25px 0;
+    }
+    .myPro p:nth-child(1) {
+        font-size: 36px;
+    }
+    /*********任务栏***************/
+    #myTask1 div {
+        padding: 40px 0 40px 0;
+    }
+    #myTask1 div .glyphicon:before {
+        font-size: 50px;
+    }
+    #myTask1 div p:nth-child(2) {
+        margin: 10px 0 10px 0;
+        font-size: 22px;
+    }
+    #myTask1 div p:nth-child(3) {
+        margin: 0 0 20px 0;
+        font-size: 14px;
+    }
+    #myTask1 div p:nth-child(4){
+        margin-top: 40px;
+    }
+    #myTask1 div p:nth-child(4) a {
+        font-size: 14px;
+        padding: 6px 20px 6px 20px;
+        border-radius: 15px;
+        text-decoration: none;
+    }
+    /*********问题栏***************/
+    .panel-group {
+        margin-bottom: 40px;
+    }
+    /*********关于我们***************/
+    #erWeima{
+        width:100px;
+        height:100px;
+    }
+    .myInfo1 {
+        text-align: center;
+        padding: 30px 0 20px 0;
+    }
+    .myInfo1 p:nth-child(1) {
+        font-size: 16px;
+        color: #999999;
+    }
+    .myInfo2 {
+        font-size: 14px;
+        color: #999999;
+    }
+    .myInfo {
+        text-align: left;
+        padding: 30px 0 20px 0;
+    }
+    .myInfo p:nth-child(1) {
+        font-size: 16px;
+        color: #999999;
+        margin-bottom: 20px;
+    }
+    .myInfo p:nth-child(2) {
+        font-size: 14px;
+        color: #666666;
+        margin-bottom: 20px;
+    }
+    .about_img{
+        padding-bottom: 50px;
+    }
+}
+/*>768px*/
+@media screen and (min-width:770px) and (max-width: 992px) {
+    #erWeima{
+        width:120px;
+        height:120px;
+    }
+}
+/*768px-992px*/

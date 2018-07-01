@@ -1,0 +1,167 @@
+@CHARSET "UTF-8";
+body{
+    background: #f7f7f7;
+}
+a{
+    color: #333333;
+    font-size: 16px;
+}
+.navbar {
+    margin-bottom: 0;
+    background: #fff;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #333333;
+}
+.icon-bar {
+    background-color: black;
+}
+.footer{
+    margin-top: 60px;
+}
+.message{
+    background: #fff;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+.message .head{
+    text-align: left;
+    padding-top: 20px;
+}
+.head div:nth-child(2) .btn_user{
+    border-radius:14px;
+    background: #fb2339;
+    color: #fff;
+    border: none;
+}
+.head div:nth-child(2) .btn_user:nth-child(3){
+    background: #999;
+}
+.btn3{
+    border-radius:14px;
+    border: 1px solid #fb2339;
+    color: #fb2339;
+}
+.btn3:hover{
+    background: #fb2339;
+    border: none;
+    color: #fff;
+}
+.head div:nth-child(2) p{
+    font-weight: bold;
+    font-size: 16px;
+}
+.message .row:nth-child(2){
+    margin-top: 30px;
+}
+.score div{
+    /*text-align: center;*/
+    font-size: 16px;
+}
+.score div:nth-child(1){
+    text-align: left;
+}
+.message .row div p{
+    margin: 0;
+    padding: 0;
+    line-height: 34px;
+}
+.footer{
+    margin-top: 321px;
+}
+/*鍏ㄩ儴鏍峰紡/瀵艰埅*/
+
+
+
+
+@media screen and (max-width:770px) {
+    /*********鍏充簬鎴戜滑***************/
+    .nav li a{
+        margin: 0 ;
+        border-bottom: 1px solid rgba(128,128,128,0.1);
+    }
+    .nav li:nth-child(7) a {
+        border-bottom:none;
+    }
+    #erWeima{
+        width:180px;
+        height:180px;
+    }
+    .myInfo1 {
+        text-align: center;
+    }
+    .myInfo1 p:nth-child(1) {
+        font-size: 14px;
+    }
+    .myInfo2 {
+        font-size: 12px;
+        color: #999999;
+    }
+    .myInfo {
+        text-align: center;
+    }
+    .myInfo p:nth-child(1) {
+        font-size: 14px;
+        color: #999999;
+        margin-bottom: 10px;
+    }
+    .myInfo p:nth-child(2) {
+        font-size: 12px;
+        color: #666666;
+        margin-bottom: 20px;
+    }
+    .footer{
+        margin-top: 20px;
+        padding-top: 10px;
+    }
+    .score div:nth-child(2n+1){
+        padding-left: 60px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 770px) and (max-width:3000px) {
+    /*********鍏充簬鎴戜滑***************/
+    #erWeima{
+        width:100px;
+        height:100px;
+    }
+    .myInfo1 {
+        text-align: center;
+        padding: 30px 0 20px 0;
+    }
+    .myInfo1 p:nth-child(1) {
+        font-size: 16px;
+        color: #999999;
+    }
+    .myInfo2 {
+        font-size: 14px;
+        color: #999999;
+    }
+    .myInfo {
+        text-align: left;
+        padding: 30px 0 20px 0;
+    }
+    .myInfo p:nth-child(1) {
+        font-size: 16px;
+        color: #999999;
+        margin-bottom: 20px;
+    }
+    .myInfo p:nth-child(2) {
+        font-size: 14px;
+        color: #666666;
+        margin-bottom: 20px;
+    }
+
+}
+/****************************500******************/

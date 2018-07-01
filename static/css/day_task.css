@@ -1,0 +1,290 @@
+@CHARSET "UTF-8";
+			/*****************全局样式**********************/
+			.jumbotron {
+			    background-color: #fff;
+			}
+			a:focus, a:hover {
+					color: #23527c;
+					text-decoration: none;
+			}
+			
+			.navbar-default .navbar-nav>li>a {
+				color: #333333;
+			}
+			.icon-bar {
+				background-color: black;
+			}
+			.nav li:nth-child(8) a {
+			    margin-right: 15px;
+			}
+			/******500-3000********/
+				/***图片****/
+				.jumbotron {
+					overflow: hidden;
+					padding-bottom: 0px;
+					padding-top: 30px;
+				}
+				/***文字***/
+				.new_t_font{
+					font-family: "microsoft yahei";
+					color: #333333;
+					font-size: 18px;
+					font-weight: 600;
+					margin-bottom: 30px;
+				}
+				/***图片***/
+				.new_tasks{
+					 -moz-box-shadow: 2px 2px 10px #909090;
+					-webkit-box-shadow: 2px 2px 10px #909090;
+					box-shadow:2px 2px 10px #909090;
+					margin-bottom: 20px;
+					height: 271px;
+				}	
+				.new_tasks div img{
+					width: 80px;
+					height: 80px;
+				}
+				.new_tasks div{
+					width: 100%;
+					height: 50%;
+					padding-bottom: 10%;
+				}
+				.new_tasks div:nth-child(1){
+					padding-top: 10%;
+					text-align: center;
+				}
+				.new_tasks p:nth-child(2){
+					color: #333333;
+					font-size: 15px;
+					font-weight: 600;
+					margin: 14px 0px 10px 15px;
+				}
+				.new_tasks p:nth-child(3){
+					color: #999999;
+					font-size: 14px;
+					margin: 0px 0px 20px 15px;
+				}
+				.new_tasks p:nth-child(4) a{
+					color: #999999;
+					font-size: 12px;
+					position: absolute;
+					bottom:10%;
+					right: 15%;
+				}
+				/***弹窗二维码***/
+				.overlay{
+					display: none;
+					position: fixed;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background: rgba(0,0,0,.8);
+				}
+				.box-login .section{
+						margin: auto;
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						width: 430px;
+						height: 400px;
+						background: #FFFFFF;
+						z-index: 10;
+						text-align: center;
+				}
+				.box-login .section img{
+					width: 250px;
+					height: 250px;
+				}
+				
+				.box-login .section div:nth-child(1){
+						font-size: 18px;
+						padding: 10px 0px 10px 0px;
+						background-color: #f7f7f7;
+				}
+				.box-login .section div:nth-child(2){
+						padding: 20px 50px 20px 50px;
+						text-align: center;
+						font-size: 14px;
+						color: #999999;
+				}
+				.nav #oText a{
+					color: #fb2339;
+					background-color: #f7f7f7;
+				}
+			
+			/****************************500******************/
+			@media screen and (max-width:770px) {
+				.nav li a{
+					font-size: 16px;
+				}
+						/***图片****/
+					.jumbotron {
+						overflow: hidden;
+						padding-bottom: 0px;
+						padding-top: 15px;
+						margin-bottom: 15px;
+					}
+					/***文字***/
+					.new_t_font{
+						font-family: "microsoft yahei";
+						color: #333333;
+						font-size: 15px;
+						font-weight: 600;
+						margin-bottom: 10px;
+					}
+					/***图片***/
+					.new_tasks{
+						-moz-box-shadow: 2px 2px 10px #909090;
+						-webkit-box-shadow: 2px 2px 10px #909090;
+						box-shadow:2px 2px 10px #909090;
+						padding-bottom: 3px; 
+						margin-bottom: 8px;
+						height: 180px;
+					}	
+					.new_tasks div img{
+						width: 60px;
+						height: 60px;
+					}
+					.new_tasks div{
+						width: 100%;
+						height: 50%;
+						padding-bottom: 20%;
+					}
+					.new_tasks div:nth-child(1){
+						padding-top: 8%;
+						text-align: center;
+					}
+					.new_tasks p:nth-child(2){
+						color: #333333;
+						font-size: 12px;
+						font-weight: 600;
+						margin: 7px 0px 7px 8px;
+					}
+					.new_tasks p:nth-child(3){
+						color: #666;
+						font-size: 12px;
+						margin: 0px 0px 4px 8px;
+					}
+					.new_tasks p:nth-child(4) a{
+						color: #999999;
+						font-size: 12px;
+						margin-left: 35%;
+					}
+					/***弹窗二维码***/
+					.overlay{
+							display: none;
+							position: fixed;
+							top: 0;
+							left: 0;
+							right: 0;
+							bottom: 0;
+							background: rgba(0,0,0,.8);
+					}
+					.box-login .section{
+							margin: auto;
+							position: absolute;
+							top: 0;
+							left: 0;
+							right: 0;
+							bottom: 0;
+							width: 260px;
+							height: 270px;
+							background: #FFFFFF;
+							z-index: 10;
+							text-align: center;
+					}
+					.box-login .section img{
+						width: 175px;
+						height: 175px;
+					}
+					.box-login .section div:nth-child(1){
+							font-size: 16px;
+							padding: 5px 0px 5px 0px;
+							background-color: #f7f7f7;
+					}
+					.box-login .section div:nth-child(2){
+							padding: 8px 10px 10px 6px;
+							text-align: center;
+							font-size: 12px;
+							color: #999999;
+					}
+					
+			}
+@media screen and (min-width: 770px) and (max-width: 992px) {
+	.nav li a{
+		font-size: 16px;
+	}
+	.nav li{
+		margin-left: -5px;
+	}
+	.nav li a{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.new_tasks{
+		-moz-box-shadow: 2px 2px 10px #909090;
+		-webkit-box-shadow: 2px 2px 10px #909090;
+		box-shadow:2px 2px 10px #909090;
+		padding-bottom: 3px;
+		margin-bottom: 8px;
+		height: 220px;
+	}
+	.new_tasks div img{
+		width: 70px;
+		height: 70px;
+	}
+	.new_tasks div{
+		width: 100%;
+		height: 50%;
+		padding-bottom: 20%;
+	}
+	.new_tasks div:nth-child(1){
+		padding-top:12%;
+		text-align: center;
+	}
+	.new_tasks p:nth-child(2){
+		color: #333333;
+		font-size: 12px;
+		font-weight: 600;
+		margin: 16px 0px 7px 8px;
+	}
+	.new_tasks p:nth-child(4) a{
+		color: #999999;
+		font-size: 12px;
+		position: absolute;
+		bottom:8%;
+		right: 15%;
+	}
+}
+@media screen and (min-width:992px) and (max-width: 1200px){
+	.new_tasks{
+		-moz-box-shadow: 2px 2px 10px #909090;
+		-webkit-box-shadow: 2px 2px 10px #909090;
+		box-shadow:2px 2px 10px #909090;
+		padding-bottom: 3px;
+		margin-bottom: 8px;
+		height: 180px;
+	}
+	.new_tasks div img{
+		width: 60px;
+		height: 60px;
+	}
+	.new_tasks div{
+		width: 100%;
+		height: 50%;
+		padding-bottom: 20%;
+	}
+	.new_tasks div:nth-child(1){
+		padding-top: 7%;
+		text-align: center;
+	}
+	.new_tasks p:nth-child(2){
+		color: #333333;
+		font-size: 12px;
+		font-weight: 600;
+		margin: 7px 0px 7px 8px;
+	}
+}

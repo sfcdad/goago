@@ -1,0 +1,133 @@
+@CHARSET "UTF-8";
+	/**********顶部提示*************/
+	     .top1 {
+            margin: 30px 0 10px 0;
+        	background-color: #f7f7f7;
+	      }
+	    .tips {
+		    font-size: 14px;
+		    font-weight: 600;
+		    text-align: center;
+		    padding: 20px 0 10px 0;
+	     }
+       /**************底部分类************/
+		.row {
+			margin-right: 0px;
+			margin-left: 0px;
+		}
+        a {
+          text-decoration: none;
+        }
+        .Allcontent{
+			margin-bottom: 30px;
+        }
+		/**标题**/
+		.shares_head{
+			background-color: #f7f7f7;
+			padding: 10px 0;
+		}
+		.shares_head>li{
+			width: 80px;
+			margin: 0;
+		}
+        .shares_head>li>a {	
+			font-weight: 600;
+			font-size: 16px;
+			text-align: center;
+        }
+		.shares_body{
+			margin-bottom: 20px;
+		}
+		.nav>li>a:hover {
+			text-decoration: none;
+			background-color: #fb2339;
+		}
+		a:focus, a:hover {
+			color: #333333;
+		}
+        .nav-pills>li.active>a,
+        .nav-pills>li.active>a:focus,
+        .nav-pills>li.active>a:hover {
+            background-color: #FB2339;
+            color: #ffffff;
+            border: none;
+        }
+		/**内容块**/
+		.shares_body{
+			height: 400px;
+			background-color: #f7f7f7;
+			padding: 10px 0px;
+    		margin-top: 10px;
+		}
+		.share_left{
+			padding-left: 0px;
+			padding-right: 0px;
+			background-color: #fff;
+		}
+		.share_right{
+			padding-right: 0px;
+			background-color: #fff;
+		}
+		/**上面图片**/
+		.ad_img{
+			width:100%;
+			height:280px;
+		}
+		.ad_img img{
+			width:100%;
+			height:100%;
+		}
+		/**文字**/
+		.ad_font{
+			margin: 10px 20px;
+		}
+		.p1{
+			font-size: 16px;
+			font-weight: 600;
+		}
+		.p2{
+			font-size: 14px;
+		}
+		.p3{
+			font-size: 14px;
+			color: #999999;
+		}
+		.p4{
+			font-size: 14px;
+			color: #fb2339;
+			padding-left: 60%;
+		}
+		.p4:hover {
+		    color: #fb2339;
+		    text-decoration: none;
+		}
+		@media screen and (max-width: 770px) {
+			.shares_head li{
+				width: 18%;
+			}
+			.shares_head li a{
+				display: inline-block;
+				width: 100%;
+			}
+			.p4{
+				padding-left:45%;
+			}
+			.share_left{
+				padding: 0;
+				background-color: #fff;
+				margin-top: 10px;
+			}
+			.share_right{
+				padding: 0;
+				background-color: #fff;
+				margin-top: 10px;
+			}
+			.nav>li>a{
+				padding: 10px 10px;
+			}
+		}
+@media screen and (min-width: 770px) and (max-width: 992px){
+	.p4{
+		padding-left:45%;
+}
+}

@@ -1,0 +1,83 @@
+	@media screen and (min-width: 500px) and (max-width:3000px) {
+      /*********关于我们***************/
+			#erWeima{
+				width:100px;
+				height:100px;
+			}
+			.myInfo1 {
+				text-align: center;
+				padding: 30px 0px 20px 0px;
+			}
+			.myInfo1 p:nth-child(1) {
+				font-size: 16px;
+				color: #999999;
+			}
+			.myInfo2 {
+				font-size: 14px;
+				color: #999999;
+			}
+      .myInfo {
+				text-align: left;
+        padding: 30px 0px 20px 0px;
+      }
+      .myInfo p:nth-child(1) {
+        font-size: 16px;
+				color: #999999;
+        margin-bottom: 20px;
+      }
+      .myInfo p:nth-child(2) {
+				font-size: 14px;
+				color: #666666;
+        margin-bottom: 20px;
+      }
+            
+    }
+   /****************************500******************/
+  @media screen and (max-width:500px) {
+			/*********关于我们***************/
+			#erWeima{
+				width:180px;
+				height:180px;
+			}
+			.myInfo1 {
+				text-align: center;
+			}
+			.myInfo1 p:nth-child(1) {
+				font-size: 14px;
+			}
+			.myInfo2 {
+				font-size: 11px;
+				color: #999999;
+			}
+			.myInfo {
+				text-align: center;
+			}
+			.myInfo p:nth-child(1) {
+				font-size: 14px;
+				color: #999999;
+				margin-bottom: 10px;
+			}
+			.myInfo p:nth-child(2) {
+				font-size: 11px;
+				color: #666666;
+				margin-bottom: 20px;
+			}
+						
+		}
+  /*****************全局样式**********************/
+		/**导航**/
+    a{
+      color: #333333;
+			font-size: 16px;
+    }
+		.navbar {
+			margin-bottom: 0px;
+		}
+		.navbar-nav>li>a {
+			color: #333333;
+		}
+	
+    .icon-bar {
+      background-color: black;
+    }
+	
