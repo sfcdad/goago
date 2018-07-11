@@ -4498,7 +4498,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 
 .navbar {
     position: relative;
-    min-height: 50px;
+    min-height: 80px;
     margin-bottom: 20px;
     border: 1px solid transparent;
 }
@@ -4870,7 +4870,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 }
 
 .navbar-default {
-    background-color: #f8f8f8;
+    background-color: #080808;
     border-color: #e7e7e7;
 }
 

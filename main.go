@@ -14,7 +14,7 @@ func Init() {
 }
 
 func main() {
-	fmt.Println("start..")
+	fmt.Println("start Port:8080..")
 
 	r := gin.Default()
 	//
