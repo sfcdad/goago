@@ -42,11 +42,12 @@
     <!--顶部导航-->
     <!---------------------------body------------------------------>
     <div style="height: 100%; width: 80%; margin-top: 50px; margin-left: 10%;">
+        {{range .DataList}}
         <!--row-->
-        <div style="height: 320px; margin-bottom: 20px; background-color: #e7e7e7;box-shadow: 4px 4px 4px #888888;">
+        <div style="height: 320px; margin-bottom: 20px; background-color: #e7e7e7;box-shadow: 2px 2px 2px 2px #888888;">
             <div style="height: 100%; width: 320px; float: left;padding-right:30px;background-color:#ffffff">
-                <a href="https://item.jd.com/5155905.html" target="_blank">
-                <img style="width: 100%; height: 100%" src="https://img14.360buyimg.com/n0/jfs/t19843/6/2160171365/339844/53c5fa21/5b32fb3bN09ca4fbc.jpg">
+                <a href="{{.ProductUrl}}" target="_blank">
+                <img style="width: 100%; height: 100%" src="{{.IconUrl}}">
                 </a>
             </div>
             <div style="width: 200px; float: left;padding-top:100px;padding-left:100px;font-size:18px;font-family:'Microsoft YaHei'">
@@ -66,14 +67,7 @@
             </div>
         </div>
         <!--row-->
-
-        <!--row-->
-        <div style="height: 150px; margin-bottom: 20px; background-color: dimgray">dfdsfds</div>
-        <!--row-->
-
-        <!--row-->
-        <div style="height: 150px; margin-bottom: 20px; background-color: dimgray">dfdsfds</div>
-        <!--row-->
+        {{end}}
     </div>
     <!--中间区域-->
     <div style="background-color: #000000; color: #999999;" class="footer">

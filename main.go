@@ -15,7 +15,6 @@ func Init() {
 
 func main() {
 	fmt.Println("start Port:8080..")
-
 	r := gin.Default()
 	//
 	allRouter(r, fmt.Sprintf("%s", "/"))
@@ -35,6 +34,7 @@ func allStatic(router *gin.Engine) {
 }
 
 func allTemplates(router *gin.Engine) {
+
 	router.LoadHTMLGlob("html/*")
 
 }

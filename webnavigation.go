@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/goago/app_code/shopapp"
 	"fmt"
 	"net/http"
 
@@ -8,6 +9,8 @@ import (
 )
 
 func RouterBO(router *gin.Engine, prefix string) {
+
+
 	// 首页
 	index := fmt.Sprintf("%s/%s", prefix, "")
 	router.GET(index, Index)
@@ -21,5 +24,7 @@ func RouterBO(router *gin.Engine, prefix string) {
 
 func Index(c *gin.Context) {
 
-	c.HTML(http.StatusOK, "start.html", gin.H{})
+	var info shopapp.HomePageInfo = shopapp.GetInfo_HomePage()
+	//
+	c.HTML(http.StatusOK, "start.html",info)
 }
