@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body style="margin:auto;margin-top:0px;">
+
+    <div id="head_1" style="height:80px; width:100%;background:#808080;text-align:center;vertical-align:middle;padding-top:1px">
+        <h1>搜罗好物APP 开发计划 2018</h1>
+    </div>
+    <div id="content" style="margin-left:20px">
+        {{range .DataList}}
+        <div class="row news_body">
+
+            <div >
+                <img src="{{.IconUrl}}" class="img-responsive news_img">
+            </div>
+
+            <div class="col-lg-9 col-md-9 col-xs-8 col-sm-9">
+                <p class="right_p1">{{.Name}}</p>
+                <p class="right_p2">
+                    来源：
+                </p>
+                <a href="{{.ProductUrl}}" class="right_p3" target="_blank">查看原文&raquo;</a>
+            </div>
+        </div>
+        {{end}}
+    </div>
+
+</body>
+
+</html>

@@ -1,19 +1,23 @@
 /*
-2018-7-1
+jing > ping > taobao
+2018-8-2
 */
 package main
 
 import (
+	// "github.com/goago/app_code/webms"
 	"fmt"
-
+	
 	"github.com/gin-gonic/gin"
 )
 
 func Init() {
+	
 	fmt.Println("init done.")
 }
 
 func main() {
+	// webms.InsertTestData_Menu()
 	fmt.Println("start Port:8080..")
 	r := gin.Default()
 	//

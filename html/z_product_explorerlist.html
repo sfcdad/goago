@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>{{.PageTitle}}</title>
+    <style>
+        a {
+            color: black;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+
+            a:hover {
+                color: blue;
+            }
+
+        .a_btn_labeldefault {
+            height: 30px;
+            border: 1px solid #CCC;
+            background: #FFF;
+            border-radius: 10px;
+            display: grid;
+            padding-top: 8px;
+        }
+
+        .a_btn_labelselect {
+            height: 30px;
+            border: 1px solid red;
+            background: #FFF;
+            border-radius: 10px;
+            display: grid;
+            padding-top: 8px;
+        }
+
+        .a_btn_label_level1 {
+            height: 30px;
+            /*border: 1px solid red;*/
+            background: #808080;
+            border-radius: 6px;
+            display: grid;
+            padding-top: 8px;
+        }
+
+        .a_btn_save {
+            width: 150px;
+            height: 20px;
+            border: 1px solid #CCC;
+            background: #808080;
+            border-radius: 10px;
+            display: grid;
+            padding-top: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-left: 200px;">
+        <div>
+            <table>
+                <tr>
+                    <th>
+                        <h3>商品分类 > {{.PageTitle}} </h3>
+                    </th>
+                    <th>
+                        <a href="/explorerlistadd">新增一级
+                        </a>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div style="margin-top: 10px; margin-bottom: 10px;">
+            {{range.LabelList}}
+        <div id="div_level_101" style="background-color: white; margin-top: 20px; border-radius: 6px;">
+            <!--第1层级目录-->
+            <table>
+                <tr>
+                    <th>
+                        <form action="/explorersavetoplevel" method="post">
+                            <table>
+                                <tr>
+                                    <th>
+                                        <input id="id_1" name="txt_explorername" type="text" value="{{.ExplorerName}}" />
+                                    </th>
+                                    <th>
+                                        <input id="hid_explorerguid" name="txt_explorerguid" type="hidden" value="{{.ExplorerGUID}}" />
+                                        <input id="Submit_level1" type="submit" value="保存分类" />
+                                    </th>
+                                </tr>
+                            </table>
+                        </form>
+
+                    </th>
+                    <th style="width: 100px">
+                        <a href="/explorerlist?cmd=3&explorerguid={{.ExplorerGUID}}" class="btn_edit">
+                            <div class="a_btn_label_level1">删除</div>
+                        </a>
+                    </th>
+                    <th style="width: 180px">
+                        <a href="/explorerlist?cmd=1&explorerguid={{.ExplorerGUID}}" class="btn_edit">
+                            <div class="a_btn_label_level1">新增子标签</div>
+                        </a>
+                    </th>
+                </tr>
+            </table>
+            <hr />
+            {{range.SecondLevelTagList}}
+        <!--第2层级目录-->
+            <table>
+                <tr>
+                    <th style="width: 20px">{{.LabelGUID}}</th>
+                    <th style="width: 10px"></th>
+                    <th style="width: 150px">
+                        <form action="/explorerlist" method="post">
+                            <table>
+                                <tr>
+                                    <th>
+                                        <input id="Text1" name="txt_labelname" type="text" value="{{.LabelName}}" />
+                                    </th>
+                                    <th>
+                                        <input id="hiddir" name="txt_explorerguid" type="hidden" value="{{.ExplorerGUID}}" />
+                                        <input id="Hidden1" name="txt_labelguid" type="hidden" value="{{.LabelGUID}}" />
+                                        <input id="Submit1" type="submit" value="保存" />
+                                    </th>
+                                </tr>
+                            </table>
+                        </form>
+                    </th>
+                    <th style="width: 20px"></th>
+                    <th style="width: 120px">
+                        <a href="/explorerlist?cmd=2&explorerguid={{.ExplorerGUID}}&id={{.LabelGUID}}" class="btn_edit">
+                            <div class="{{.ClassStyle}}">删除</div>
+                        </a>
+                    </th>
+                    <th style="width: 120px"></th>
+                    <th style="width: 120px">
+                        <a href="/configdisplaylabel?folderid=1&labelguid={{.LabelGUID}}" class="btn_edit">
+                            <div>添加到首页顶部</div>
+                        </a>
+                    </th>
+                    <th style="width: 120px">
+                        <a href="/configdisplaylabel?folderid=2&labelguid={{.LabelGUID}}" class="btn_edit">
+                            <div>添加到首页底部</div>
+                        </a>
+                    </th>
+                </tr>
+            </table>
+            <br />
+            {{end}}
+        </div>
+            {{end}}
+        </div>
+    </div>
+</body>
+</html>

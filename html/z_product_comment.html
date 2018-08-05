@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body style="margin: auto; margin-top: 0px;">
+    <div id="head_1" style="height: 80px; width: 100%; background: #808080; text-align: center; vertical-align: middle; padding-top: 1px">
+        <h3>商品名称:{{.ProductName}}</h3>
+    </div>
+    <div style="height: 30px">
+        <br />
+    </div>
+    <div style="margin-left: 30px">
+        <form action="/productcomment" method="POST">
+            商品评语:&nbsp;&nbsp;
+            <input type="text" name="txt_productcomment" value="{{.ProductComment}}" style="height: 230px; width: 1000px" /><br />
+            <br />
+            <input id="Hidden1" name="hid_productguid" type="hidden" value="{{.ProductGUID}}" />
+            <br />
+            <input type="submit" style="height: 35px; width: 183px" value="保存" />
+            <div style="color: green; font-weight: 600">
+                {{.StatusText}}
+            </div>
+        </form>
+    </div>
+</body>
+</html>

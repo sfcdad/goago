@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body style="margin: auto; margin-top: 0px;">
+    <div id="head_1" style="height: 80px; width: 100%; background: #808080; text-align: center; vertical-align: middle; padding-top: 1px">
+        <h3>商品名称:{{.RowInfo.ProductName}}</h3>
+    </div>
+    <div style="height: 30px">
+        <br />
+    </div>
+    <div style="margin-left: 30px">
+        <form action="/productinfo?id={{.RowInfo.ProductGUID}}" method="POST">
+            商品名称:&nbsp;&nbsp;
+            <input type="text" name="txt_productname" value="{{.RowInfo.ProductName}}" style="height: 30px; width: 1000px" /><br />
+            <br />
+            图标地址：<input type="text" name="txt_iconurl" value="{{.RowInfo.IconUrl}}" style="height: 30px; width: 1000px" /><br />
+            <br />
+            推广链接：<textarea name="txt_sellurl" style="border: thin inset #000000; width: 1000px; height: 80px; text-align: left; vertical-align: top;">{{.RowInfo.SellUrl}}</textarea>
+            <br />
+            商品编号:{{.RowInfo.ProductGUID}}
+            <div>
+                <h3>分类标签：</h3>
+            </div>
+            <div>
+                 {{.RowInfo.ExplorerName}}
+                <br />
+            </div>
+            <br />
+            <input type="submit" style="height: 35px; width: 183px" value="保存" />
+            <div style="color: green; font-weight: 600">
+                {{.RowInfo.StatusText}}
+            </div>
+        </form>
+    </div>
+
+    <hr style="filter: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color="#black" size="2">
+    <br />
+    <div style="margin-left: 30px">
+        <form action="/product_delete?id={{.RowInfo.ProductGUID}}" method="POST">
+            输入删除的商品名称:&nbsp;&nbsp;
+            <input type="text" name="txt_productname_del" style="height: 30px; width: 1000px" /><br />
+            <br />
+            <input type="submit" style="height: 35px; width: 183px" value="确定删除" />
+        </form>
+    </div>
+        <hr style="filter: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color="#black" size="2">
+    <br />
+    <div>
+        <a href="/configdisplayproduct?enumid=1&productguid={{.RowInfo.ProductGUID}}">添加该商品到APP首页顶部</a>
+    </div>
+    <div>
+        <a href="/configdisplayproduct?enumid=2&productguid={{.RowInfo.ProductGUID}}">添加该商品到APP首页底部</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            overflow: hidden;
+            margin-top: 0px;
+        }
+
+        a {
+            color: black;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+
+            a:hover {
+                color: blue;
+            }
+
+        .btn_edit {
+            font-size:medium;
+        }
+
+        .a_btn_nextpage_style {
+            height: 30px;
+            border: 1px solid #CCC;
+            background: #FFF;
+            border-radius: 10px;
+            display: grid;
+            padding-top: 8px;
+        }
+
+        .a_btn_nextpage_style_select {
+            height: 30px;
+            border: 1px solid red;
+            background: #FFF;
+            border-radius: 10px;
+            display: grid;
+            padding-top: 8px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="content" style="margin-left: 0px; padding-top: 0px; padding-left: 0px; padding-right: 0px">
+        {{range .DataList}}
+        <table style="width: 100%; background-color: #C0C0C0; margin-left: 0px; border-radius: 2px;">
+            <tr>
+                <th style="width: 120px">
+                    <img src="{{.IconUrl}}" style="width: 80px; height: 80px" />
+                </th>
+                <th style="width: 360px; text-align: left;">{{.ProductName}}
+                </th>
+                <th style="width: 150px">
+                    <a href="{{.SellUrl}}" class="right_p3" target="_blank">打开链接</a>
+                </th>
+                <th style="width: 80px">
+                    <a href="/productinfo?id={{.ProductGUID}}" class="btn_edit"><div class="a_btn_nextpage_style">编辑</div></a>
+                </th>
+                  <th style="width: 80px">
+                    <a href="/productlabelset?cmd=1&id={{.ProductGUID}}" class="btn_edit"><div class="a_btn_nextpage_style">标签</div></a>
+                </th>
+                <th style="width: 80px">
+                    <a href="/productdestext?productguid={{.ProductGUID}}" class="btn_edit"><div class="a_btn_nextpage_style">描述</div></a>
+                </th>
+                <th style="width: 240px">
+                    更新:{{.OPTimeText}}
+                </th>
+                <th style="width: 10px"></th>
+            </tr>
+        </table>
+        <br />
+        {{end}}
+    </div>
+
+    <!--分页Pagination start-->
+    <div>
+        <table style="height: 60px">
+            <tr style="height: 60px">
+                <th style="width: 120px">
+                    <a href="{{.PaginationPre}}">
+                        <div class="a_btn_nextpage_style">上一页</div>
+                    </a>
+                </th>
+                 <th style="width: 260px">第{{.CurrentPageIndex}}页  共{{.MaxPage}}页
+                </th>
+                <th style="width: 120px">
+                    <a href="{{.PaginationNext}}">
+                        <div class="a_btn_nextpage_style">下一页</div>
+                    </a>
+                </th>
+               <th style="width: 80px">
+                </th>
+                <th style="width: 280px">
+                    <form action="/product" method="post">
+                        <table>
+                            <tr>
+                                <th>到第
+                                    <input id="gotopage" name="txtgotopage" type="text" value="{{.GoToPage}}" style="width: 80px; height: 24px; font-size: large;border-radius: 3px;" />
+                                    页
+                                </th>
+                                <th>
+                                    <input id="Hidden1" name="txtmaxpage" type="hidden" value="{{.MaxPage}}" />
+                                    <input type="submit" style="height: 30px; width: 100px;border-radius: 6px;" value="Go" />
+                                </th>
+                            </tr>
+                        </table>
+                    </form>
+                </th>
+            </tr>
+        </table>
+    </div>
+    <!--分页Pagination end-->
+
+</body>
+</html>
+
+<!--
+    <th style="width: 50px">
+                    <a href="#">
+                        <div class="{{.Pagination_1.PageNumStyle}}">1</div>
+                    </a>
+                </th>
+                <th style="width: 50px">
+                    <a href="#">
+                        <div class="{{.Pagination_2.PageNumStyle}}">2</div>
+                    </a>
+                </th>
+                <th style="width: 50px">
+                    <a href="#">
+                        <div class="{{.Pagination_3.PageNumStyle}}">3</div>
+                    </a>
+                </th>
+                <th style="width: 50px">
+                    <a href="#">
+                        <div class="{{.Pagination_4.PageNumStyle}}">4</div>
+                    </a>
+                </th>
+                <th style="width: 50px">
+                    <a href="#">
+                        <div class="{{.Pagination_5.PageNumStyle}}">5</div>
+                    </a>
+                </th>
+                <th style="width: 50px">
+                    <a href="#">
+                        <div class="{{.Pagination_6.PageNumStyle}}">6</div>
+                    </a>
+                </th>
+-->

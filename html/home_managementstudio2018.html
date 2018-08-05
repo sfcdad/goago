@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>后台管理系统 2018</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin: 0;
+            background-color: #eeeeee;
+        }
+
+        .alldiv {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        a {
+            color: #C0C0C0;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+
+        a:hover {
+             color: white;
+        }
+
+        .area_top{
+            background-color: black;
+            width:100%;
+        }
+
+        h2 {
+            margin: 0;
+        }
+
+       
+
+        .C {
+            background: #9CF;
+            width: 100%;
+            height: 180px;
+            line-height: 80px;
+            letter-spacing: 1px;
+            text-align: center;
+            clear: both;
+            background-color: black;
+            color: white;
+        }
+
+        .s_icon {
+            width: 300px;
+            height: 60px;
+            margin-left: 40px;
+        }
+
+        .area_b_left{
+             width: 200px;
+            height: 80%;
+            background-color: white;
+            float: left;
+            vertical-align: top;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 30px;
+            margin-bottom: 100px;
+            border-radius: 4px;
+            float: left;
+        }
+
+        @media screen and (max-width:1081px) {
+            body {
+                background-color:#eeeeee;
+                width:1280px;
+                height:1620px;
+            }
+            .area_b_right{
+                width: 900px;
+                height: 800px;
+            }
+
+            /*Mobile phone*/
+             .area_b {
+                width: 1200px;
+                height: 100%;
+                margin: 10px auto 10px;
+            }
+       }
+
+        /*PC*/
+         @media screen and (min-width:1081px){
+            .area_b_right{
+                width: 1200px;
+                height: 800px;
+            }
+
+             .area_b {
+                width: 1600px;
+                height: 100%;
+                margin: 20px auto 50px;
+            }
+	   }
+    }
+    </style>
+</head>
+<body>
+
+    <!-- 此处用了传统的三段式结构:Container代表整个容器，Header代表容器的上部，Content代表容器的中部也就是内容部分，Footer代表容器的底部 -->
+    <div class="alldiv">
+        <!--Top-start-->
+
+        <div class="area_top">
+            <table style="width: 100%; color: #C0C0C0;">
+                <tr>
+                    <th style="width: 310px; text-align: left;">
+                        <a href="/devplan">
+                            <img src="static/img/appicon.jpg" class="s_icon" />
+                        </a>
+                    </th>
+                    <th style="width: 450px; text-align: left; padding-left: 30px"></th>
+                    <th style="width: 100px; text-align: center;">
+                        <a href="/" target="_blank">
+                            <h2>主页</h2>
+                        </a>
+                    </th>
+                    <th style="width: 100px; text-align: center;">
+                        <a href="/devplan" target="_blank">
+                            <h2>iOS</h2>
+                        </a>
+                    </th>
+                    <th style="width: 100px; text-align: left; padding-right: 30px">
+                        <a href="/devplan" target="_blank">
+                            <h2>API</h2>
+                        </a>
+                    </th>
+                    <th style="width: 30%;"></th>
+                </tr>
+            </table>
+        </div>
+
+        <!--Top-End-->
+
+        <!--页面主体布局-左右结构 1 -->
+        <div class="area_b">
+            <div class="area_b_left" style="float: left">
+                <div style="width: 100px;">
+                    {{range .NodeList}}
+                    <h3 style="margin-left: 10px">{{.MenuName}}</h3>
+                    {{range .NodeList}}
+                    <table style="width: 180px; text-align: left; padding-left: 20px; padding-top: 10px;">
+                        <tr>
+                            <th><a href="{{.MenuUrl}}" target="_top">
+                                <p style="color: black;">{{.MenuName}}</p>
+                            </a>
+                            </th>
+                        </tr>
+                    </table>
+                    {{end}}
+                    {{end}}
+                </div>
+
+            </div>
+            <!--右边-->
+            <div  style="margin-left: -80px; width: 50%; height: 100%; margin-top: 30px; float: left;">
+                <object class="area_b_right" data="{{.RightHtml}}">
+                </object>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <!--页面主体布局-左右结构 2 -->
+
+        <!--Page bottom-start-->
+        <div class="C">
+            <table style="width: 100%;">
+                <tr>
+                    <th style="width: 250px; text-align: left; padding-left: 30px;">
+                        <h3><a href="/">Home</a></h3>
+                    </th>
+                    <th style="width: 250px; text-align: left; padding-left: 30px">
+                        <h3><a href="/devplan" target="_blank">API</a></h3>
+                    </th>
+                    <th style="width: 100%; text-align: center;">
+                        <h2>MS 后台管理系统 2018</h2>
+                    </th>
+                    <th style="width: 150px; text-align: left; padding-right: 30px">
+                        <h3><a href="/">Home</a></h3>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <!--page bottom-End-->
+    </div>
+</body>
+</html>
